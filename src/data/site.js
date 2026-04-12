@@ -14,9 +14,9 @@ export const site = {
   github: 'https://github.com/josephdubon',
   currentEdition: {
     label: 'Spring 2026',
-    title: 'Engineering portfolio in active development',
+    title: 'Building systems for the next layer of work',
     summary:
-      'Reworking this site into a clearer record of shipped software, operational leadership, and the systems thinking that connects both.',
+      'Focused on the intersection of software, automation, and operational clarity: the tools, workflows, and support systems that help people move faster without losing precision.',
     stats: [
       { label: 'Experience', value: '10+ years' },
       { label: 'Delivery', value: '100+ web builds' },
