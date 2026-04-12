@@ -11,8 +11,8 @@ tags:
   - Automation
   - Internal Tools
   - AI Workflows
-heroImage: /images/blog/doom-emacs-org-mode-engineering-journal.jpg
-heroImageAlt: Programmer workspace with code on multiple screens in blue and red lighting.
+heroImage: /images/projects/internal-tools-ai-workflows-collaboration.jpg
+heroImageAlt: Two people reviewing a laptop together in a bright collaborative workspace.
 relatedPosts:
   - doom-emacs-org-mode-engineering-journal
 ---

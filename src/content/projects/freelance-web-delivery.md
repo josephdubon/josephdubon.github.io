@@ -11,8 +11,8 @@ tags:
   - Python
   - WordPress
   - Client Delivery
-heroImage: /images/blog/why-a-good-website-matters-web-presence.jpg
-heroImageAlt: Laptop screen displaying a website on a desk.
+heroImage: /images/projects/freelance-web-delivery-client-work.jpg
+heroImageAlt: Team gathered around a table reviewing charts, notes, and a laptop during a client work session.
 relatedPosts:
   - why-a-good-website-still-matters
 ---

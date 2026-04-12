@@ -11,8 +11,8 @@ tags:
   - Leadership
   - Process Design
   - Reporting
-heroImage: /images/blog/technology-education-for-kids-classroom.jpg
-heroImageAlt: Children gathered around a laptop in a collaborative learning environment.
+heroImage: /images/projects/technical-operations-leadership-team-meeting.jpg
+heroImageAlt: Team members in a meeting leaning over a laptop during a planning discussion.
 relatedPosts:
   - kids-do-not-just-naturally-understand-technology
 ---
