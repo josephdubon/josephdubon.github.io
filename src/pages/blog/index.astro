@@ -40,6 +40,11 @@ const getPostPath = (id: string) => `/blog/${id.replace(/\.md$/, '')}/`;
             })}
           </p>
           <div class="post-copy">
+            {post.data.heroImage ? (
+              <a class="post-thumb" href={getPostPath(post.id)}>
+                <img src={post.data.heroImage} alt={post.data.heroImageAlt ?? post.data.title} loading="lazy" />
+              </a>
+            ) : null}
             <h2>
               <a href={getPostPath(post.id)}>{post.data.title}</a>
             </h2>

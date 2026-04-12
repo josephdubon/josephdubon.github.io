@@ -29,6 +29,11 @@ const { Content } = await render(post);
 
     <MotionSection client:load as="article" className="article-shell" delay={0.05}>
       <a class="back-link" href="/blog/">Back to blog</a>
+      {post.data.heroImage ? (
+        <figure class="article-media">
+          <img src={post.data.heroImage} alt={post.data.heroImageAlt ?? post.data.title} />
+        </figure>
+      ) : null}
       <header class="article-header">
         <p class="eyebrow">Post</p>
         <h1>{post.data.title}</h1>
