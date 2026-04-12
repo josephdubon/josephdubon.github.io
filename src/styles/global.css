@@ -595,7 +595,12 @@ h3 {
 }
 
 .page-intro h1 {
-  max-width: 10ch;
+  max-width: 15ch;
+}
+
+.page-intro .section-copy {
+  max-width: 56rem;
+  margin-top: var(--space-3);
 }
 
 .post-list {
