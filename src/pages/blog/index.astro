@@ -12,7 +12,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a: BlogEntry, b: BlogEntry) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
 
-const getPostPath = (id: string) => `/blog/${id.replace(/\.md$/, '')}/`;
+const getPostPath = (post: BlogEntry) => `/blog/${post.slug}/`;
 
 const blogSchema = {
   '@context': 'https://schema.org',
@@ -37,9 +37,9 @@ const blogSchema = {
 
     <MotionSection client:load className="page-intro" delay={0.05}>
       <p class="eyebrow">Journal</p>
-      <h1>Notes on software, systems, automation, and the work behind delivery.</h1>
+      <h1>Essays on software, systems, and the realities of making things work.</h1>
       <p class="section-copy">
-        A running archive for technical notes, workflow decisions, and the practical thinking behind shipped systems.
+        Writing on engineering, automation, web presence, and technology education from the perspective of someone who has to ship, support, and improve real systems.
       </p>
     </MotionSection>
 
@@ -55,12 +55,12 @@ const blogSchema = {
           </p>
           <div class="post-copy">
             {post.data.heroImage ? (
-              <a class="post-thumb" href={getPostPath(post.id)}>
+              <a class="post-thumb" href={getPostPath(post)}>
                 <img src={post.data.heroImage} alt={post.data.heroImageAlt ?? post.data.title} loading="lazy" />
               </a>
             ) : null}
             <h2>
-              <a href={getPostPath(post.id)}>{post.data.title}</a>
+              <a href={getPostPath(post)}>{post.data.title}</a>
             </h2>
             <p>{post.data.description}</p>
             <div class="tag-row">

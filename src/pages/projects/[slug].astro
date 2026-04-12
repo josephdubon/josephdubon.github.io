@@ -1,0 +1,131 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import OrganicHeader from '../../components/react/OrganicHeader.jsx';
+import MotionSection from '../../components/react/MotionSection.jsx';
+import { site } from '../../data/site';
+
+type ProjectEntry = CollectionEntry<'projects'>;
+type BlogEntry = CollectionEntry<'blog'>;
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+
+  return projects.map((project: ProjectEntry) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props as { project: ProjectEntry };
+const { Content } = await render(project);
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const relatedPosts = allPosts.filter((post: BlogEntry) => project.data.relatedPosts.includes(post.slug));
+const projectUrl = `/projects/${project.slug}/`;
+
+const projectSchema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: project.data.title,
+    description: project.data.description,
+    url: `${site.siteUrl}${projectUrl}`,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: site.siteUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Projects',
+        item: `${site.siteUrl}/projects/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: project.data.title,
+        item: `${site.siteUrl}${projectUrl}`,
+      },
+    ],
+  },
+];
+---
+
+<MainLayout
+  title={`${project.data.seoTitle ?? project.data.title} | ${site.title}`}
+  description={project.data.description}
+  canonical={projectUrl}
+  image={project.data.heroImage ?? site.ogImage}
+  structuredData={projectSchema}
+>
+  <main class="shell">
+    <div class="header-wrap">
+      <OrganicHeader client:load currentPath="/projects/" />
+    </div>
+
+    <MotionSection client:load as="article" className="article-shell" delay={0.05}>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/projects/">Projects</a>
+        <span>/</span>
+        <span>{project.data.title}</span>
+      </nav>
+
+      {project.data.heroImage ? (
+        <figure class="article-media">
+          <img src={project.data.heroImage} alt={project.data.heroImageAlt ?? project.data.title} />
+        </figure>
+      ) : null}
+
+      <header class="article-header">
+        <p class="eyebrow">Case Study</p>
+        <h1>{project.data.title}</h1>
+        <p class="section-copy">{project.data.description}</p>
+        <div class="tag-row">
+          <span>{project.data.type}</span>
+          <span>{project.data.year}</span>
+          {project.data.status ? <span>{project.data.status}</span> : null}
+        </div>
+      </header>
+
+      <div class="article-body">
+        <Content />
+      </div>
+    </MotionSection>
+
+    {relatedPosts.length ? (
+      <MotionSection client:load className="panel" delay={0.1}>
+        <div class="section-heading">
+          <p class="eyebrow">Related Writing</p>
+          <h2>Posts connected to this work.</h2>
+        </div>
+        <div class="writing-list">
+          {relatedPosts.map((post: BlogEntry) => (
+            <a class="writing-card" href={`/blog/${post.slug}/`}>
+              <p class="writing-date">
+                {post.data.publishDate.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </p>
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </MotionSection>
+    ) : null}
+
+    <SiteFooter />
+  </main>
+</MainLayout>

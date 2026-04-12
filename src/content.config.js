@@ -11,7 +11,25 @@ const blog = defineCollection({
     featured: z.boolean().default(false),
     heroImage: z.string().optional(),
     heroImageAlt: z.string().optional(),
+    relatedProjects: z.array(z.string()).default([]),
+    seoTitle: z.string().optional(),
   }),
 });
 
-export const collections = { blog };
+const projects = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    year: z.string(),
+    type: z.string(),
+    status: z.string().optional(),
+    featured: z.boolean().default(true),
+    tags: z.array(z.string()).default([]),
+    heroImage: z.string().optional(),
+    heroImageAlt: z.string().optional(),
+    relatedPosts: z.array(z.string()).default([]),
+    seoTitle: z.string().optional(),
+  }),
+});
+
+export const collections = { blog, projects };

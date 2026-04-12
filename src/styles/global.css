@@ -573,6 +573,14 @@ h3 {
   margin-top: auto;
 }
 
+.project-card-title {
+  font-size: 1.6rem;
+}
+
+.project-card-title a {
+  color: var(--ink);
+}
+
 .site-footer {
   display: flex;
   align-items: center;
@@ -663,6 +671,21 @@ h3 {
   background:
     linear-gradient(180deg, rgba(224, 175, 104, 0.03), transparent 18%),
     var(--paper);
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+  color: var(--soft);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.breadcrumb a {
+  color: var(--muted);
 }
 
 .article-header {

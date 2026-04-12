@@ -1,4 +1,5 @@
 ---
+slug: doom-emacs-org-mode-engineering-journal
 title: Doom Emacs, Org Mode, and the Engineering Journal I Actually Use
 description: How I use Doom Emacs and org-mode as a daily engineering journal, planning system, and thinking tool.
 publishDate: 2026-04-10
@@ -9,6 +10,8 @@ tags:
 featured: true
 heroImage: /images/blog/doom-emacs-org-mode-engineering-journal.jpg
 heroImageAlt: Programmer workspace with code on multiple screens in blue and red lighting.
+relatedProjects:
+  - internal-tools-ai-workflows
 ---
 
 I have used a lot of tools that promised to organize my work better. Most of them were either too rigid, too shallow, or too dependent on a polished interface that broke the moment my real day got messy.

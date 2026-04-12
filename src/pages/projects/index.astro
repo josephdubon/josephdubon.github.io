@@ -1,0 +1,67 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import OrganicHeader from '../../components/react/OrganicHeader.jsx';
+import MotionSection from '../../components/react/MotionSection.jsx';
+import { site } from '../../data/site';
+
+type ProjectEntry = CollectionEntry<'projects'>;
+
+const projects = (await getCollection('projects')).sort(
+  (a: ProjectEntry, b: ProjectEntry) => b.data.year.localeCompare(a.data.year)
+);
+
+const projectSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `${site.title} Projects`,
+  url: `${site.siteUrl}/projects/`,
+  description: 'Case studies covering freelance web delivery, internal tools, automation, and technical operations.',
+};
+---
+
+<MainLayout
+  title={`Projects | ${site.title}`}
+  description="Case studies covering freelance web delivery, internal tools, automation, and technical operations."
+  canonical="/projects/"
+  image={site.ogImage}
+  structuredData={projectSchema}
+>
+  <main class="shell">
+    <div class="header-wrap">
+      <OrganicHeader client:load currentPath={Astro.url.pathname} />
+    </div>
+
+    <MotionSection client:load className="page-intro" delay={0.05}>
+      <p class="eyebrow">Projects</p>
+      <h1>Case studies in software delivery, automation, and operational execution.</h1>
+      <p class="section-copy">
+        A focused set of pages on the work I want indexed and understood most clearly.
+      </p>
+    </MotionSection>
+
+    <MotionSection client:load className="panel" delay={0.1}>
+      <div class="project-grid">
+        {projects.map((project: ProjectEntry) => (
+          <article class="project-card">
+            <div class="project-topline">
+              <span>{project.data.type}</span>
+              <span>{project.data.year}</span>
+            </div>
+            <h2 class="project-card-title">
+              <a href={`/projects/${project.slug}/`}>{project.data.title}</a>
+            </h2>
+            <p>{project.data.description}</p>
+            <div class="tag-row">
+              {project.data.tags.map((tag: string) => <span>{tag}</span>)}
+            </div>
+            <a class="project-link" href={`/projects/${project.slug}/`}>Read case study</a>
+          </article>
+        ))}
+      </div>
+    </MotionSection>
+
+    <SiteFooter />
+  </main>
+</MainLayout>

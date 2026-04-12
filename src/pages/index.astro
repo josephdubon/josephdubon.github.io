@@ -4,15 +4,20 @@ import MainLayout from '../layouts/MainLayout.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import OrganicHeader from '../components/react/OrganicHeader.jsx';
 import MotionSection from '../components/react/MotionSection.jsx';
-import { nowItems, principles, projects, site } from '../data/site';
+import { nowItems, principles, site } from '../data/site';
 
 type BlogEntry = CollectionEntry<'blog'>;
+type ProjectEntry = CollectionEntry<'projects'>;
 
 const featuredPosts = (await getCollection('blog', ({ data }) => !data.draft && data.featured))
   .sort((a: BlogEntry, b: BlogEntry) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
   .slice(0, 3);
 
-const getPostPath = (id: string) => `/blog/${id.replace(/\.md$/, '')}/`;
+const featuredProjects = (await getCollection('projects', ({ data }) => data.featured))
+  .slice(0, 3) as ProjectEntry[];
+
+const getPostPath = (post: BlogEntry) => `/blog/${post.slug}/`;
+const getProjectPath = (project: ProjectEntry) => `/projects/${project.slug}/`;
 
 const homeSchema = [
   {
@@ -133,22 +138,20 @@ const homeSchema = [
           <h2>Selected experience from client delivery, internal tooling, and operations.</h2>
         </div>
         <div class="project-grid">
-          {projects.map((project) => (
+          {featuredProjects.map((project: ProjectEntry) => (
             <article class="project-card">
               <div class="project-topline">
-                <span>{project.type}</span>
-                <span>{project.year}</span>
+                <span>{project.data.type}</span>
+                <span>{project.data.year}</span>
               </div>
-              <h3>{project.name}</h3>
-              <p>{project.description}</p>
+              <h3>{project.data.title}</h3>
+              <p>{project.data.description}</p>
               <div class="tag-row">
-                {project.tags.map((tag) => <span>{tag}</span>)}
+                {project.data.tags.map((tag: string) => <span>{tag}</span>)}
               </div>
-              {project.href ? (
-                <a class="project-link" href={project.href} target="_blank" rel="noreferrer">
-                  View reference
-                </a>
-              ) : null}
+              <a class="project-link" href={getProjectPath(project)}>
+                Read case study
+              </a>
             </article>
           ))}
         </div>
@@ -166,7 +169,7 @@ const homeSchema = [
         </div>
         <div class="writing-list">
           {featuredPosts.map((post: BlogEntry) => (
-            <a class="writing-card" href={getPostPath(post.id)}>
+            <a class="writing-card" href={getPostPath(post)}>
               <p class="writing-date">
                 {post.data.publishDate.toLocaleDateString('en-US', {
                   year: 'numeric',

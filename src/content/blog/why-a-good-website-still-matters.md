@@ -1,4 +1,5 @@
 ---
+slug: why-a-good-website-still-matters
 title: Your Website Still Matters More Than You Think
 description: A strong web presence creates trust, clarity, and leverage in a way social profiles never fully can.
 publishDate: 2026-04-12
@@ -9,6 +10,8 @@ tags:
 featured: true
 heroImage: /images/blog/why-a-good-website-matters-web-presence.jpg
 heroImageAlt: Laptop screen displaying a website on a desk.
+relatedProjects:
+  - freelance-web-delivery
 ---
 
 It is easy to underestimate the value of a good website now that so much of the internet runs through platforms.
