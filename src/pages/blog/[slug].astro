@@ -1,0 +1,52 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import OrganicHeader from '../../components/react/OrganicHeader.jsx';
+import MotionSection from '../../components/react/MotionSection.jsx';
+import { site } from '../../data/site';
+
+type BlogEntry = CollectionEntry<'blog'>;
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+
+  return posts.map((post: BlogEntry) => ({
+    params: { slug: post.id.replace(/\.md$/, '') },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props as { post: BlogEntry };
+const { Content } = await render(post);
+---
+
+<MainLayout title={`${post.data.title} | ${site.title}`} description={post.data.description}>
+  <main class="shell">
+    <div class="header-wrap">
+      <OrganicHeader client:load currentPath="/blog/" />
+    </div>
+
+    <MotionSection client:load as="article" className="article-shell" delay={0.05}>
+      <a class="back-link" href="/blog/">Back to blog</a>
+      <header class="article-header">
+        <p class="eyebrow">Post</p>
+        <h1>{post.data.title}</h1>
+        <p class="section-copy">{post.data.description}</p>
+        <p class="post-date">
+          {post.data.publishDate.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })}
+        </p>
+      </header>
+
+      <div class="article-body">
+        <Content />
+      </div>
+    </MotionSection>
+
+    <SiteFooter />
+  </main>
+</MainLayout>

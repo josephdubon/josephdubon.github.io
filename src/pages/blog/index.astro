@@ -1,0 +1,57 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import OrganicHeader from '../../components/react/OrganicHeader.jsx';
+import MotionSection from '../../components/react/MotionSection.jsx';
+import { site } from '../../data/site';
+
+type BlogEntry = CollectionEntry<'blog'>;
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a: BlogEntry, b: BlogEntry) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+
+const getPostPath = (id: string) => `/blog/${id.replace(/\.md$/, '')}/`;
+---
+
+<MainLayout title={`Blog | ${site.title}`} description="Writing on process, design, and web work.">
+  <main class="shell">
+    <div class="header-wrap">
+      <OrganicHeader client:load currentPath={Astro.url.pathname} />
+    </div>
+
+    <MotionSection client:load className="page-intro" delay={0.05}>
+      <p class="eyebrow">Journal</p>
+      <h1>Notes on software, systems, automation, and the work behind delivery.</h1>
+      <p class="section-copy">
+        A running archive for technical notes, workflow decisions, and the practical thinking behind shipped systems.
+      </p>
+    </MotionSection>
+
+    <MotionSection client:load className="post-list" delay={0.1}>
+      {posts.map((post: BlogEntry) => (
+        <article class="post-row">
+          <p class="post-date">
+            {post.data.publishDate.toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </p>
+          <div class="post-copy">
+            <h2>
+              <a href={getPostPath(post.id)}>{post.data.title}</a>
+            </h2>
+            <p>{post.data.description}</p>
+            <div class="tag-row">
+              {post.data.tags.map((tag: string) => <span>{tag}</span>)}
+            </div>
+          </div>
+        </article>
+      ))}
+    </MotionSection>
+
+    <SiteFooter />
+  </main>
+</MainLayout>

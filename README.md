@@ -1,6 +1,6 @@
 # Joseph Dubon Personal Site
 
-This is a small Next.js personal homepage designed to be easy to maintain.
+This repository is now set up as an Astro-powered personal blog and portfolio that builds to the committed `docs/` directory for GitHub Pages.
 
 ## Local Development
 
@@ -10,26 +10,19 @@ Run the dev server:
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open `http://localhost:4321`.
 
-## Where To Edit Content
+## Content Structure
 
-Most personal-site updates only require editing:
+- Portfolio and homepage copy lives in `src/data/site.js`
+- Blog posts live in `src/content/blog/*.md`
+- Shared layout and styling live in `src/layouts`, `src/components`, and `src/styles`
 
-`src/data/profile.js`
+## Main Pages
 
-That file controls:
-
-- name and intro text
-- contact and social links
-- current focus items
-- featured projects
-
-## Main App Files
-
-- `src/app/page.js`: homepage structure
-- `src/app/globals.css`: site styling
-- `src/app/layout.js`: metadata and root layout
+- `src/pages/index.astro`: homepage and portfolio sections
+- `src/pages/blog/index.astro`: blog archive
+- `src/pages/blog/[slug].astro`: blog post template
 
 ## Build Check
 
@@ -38,3 +31,5 @@ Run a production build with:
 ```bash
 npm run build
 ```
+
+Astro outputs the static site to `docs/`, which keeps the repo ready for GitHub Pages publishing.

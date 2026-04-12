@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="JD monogram">
+  <rect width="64" height="64" rx="18" fill="#1d140f" />
+  <circle cx="18" cy="18" r="7" fill="#b14824" />
+  <path
+    d="M20 24h8v18c0 6-3.5 10-10 10h-2v-7h1.4c1.8 0 2.6-.9 2.6-3.2V24Zm16 0h8.6c8 0 12.4 4.9 12.4 13.6 0 8.8-4.4 14.4-12.5 14.4H36V24Zm8 7v14h1.1c3.8 0 5.7-2.4 5.7-7.2 0-4.6-1.9-6.8-5.7-6.8H44Z"
+    fill="#fff8f4"
+  />
+</svg>
