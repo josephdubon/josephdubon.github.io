@@ -109,22 +109,13 @@ img {
   display: flex;
   flex-direction: column;
   flex: 1;
-}
-
-.shell > * + * {
-  margin-top: var(--space-4);
+  gap: var(--space-4);
 }
 
 .header-wrap {
-  margin-bottom: var(--space-4);
-}
-
-.header-wrap + * {
-  margin-top: 0;
 }
 
 .section-block {
-  margin-top: var(--space-4);
 }
 
 .site-header,

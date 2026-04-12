@@ -1,5 +1,6 @@
 export const site = {
   title: 'Joseph Dubon',
+  siteUrl: 'https://josephdubon.github.io',
   description:
     'Personal blog and portfolio for Joseph Dubon, a full-stack software engineer focused on internal tools, automation, and practical web systems.',
   location: 'Reno, Nevada',
@@ -7,7 +8,10 @@ export const site = {
   intro:
     'I have spent the last several years shipping software across React, Python, WordPress, and Linux-based environments while also leading operations in real-world, high-accountability settings. The throughline is straightforward: translate messy constraints into reliable systems people can actually use.',
   email: 'josephdubon@icloud.com',
+  phone: '775-232-6280',
   availability: 'Open to software engineering, internal tools, automation, technical operations, and support engineering roles.',
+  ogImage: '/images/joseph-dubon-og.svg',
+  github: 'https://github.com/josephdubon',
   currentEdition: {
     label: 'Spring 2026',
     title: 'Engineering portfolio in active development',

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Joseph Dubon website preview">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16161e" />
+      <stop offset="55%" stop-color="#1a1b26" />
+      <stop offset="100%" stop-color="#24283b" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0af68" />
+      <stop offset="100%" stop-color="#7aa2f7" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1000" cy="120" r="180" fill="#7aa2f7" opacity="0.12" />
+  <circle cx="210" cy="520" r="220" fill="#bb9af7" opacity="0.12" />
+  <rect x="66" y="66" width="1068" height="498" rx="28" fill="#24283b" stroke="#e0af68" stroke-opacity="0.18" />
+  <text x="110" y="170" fill="#e0af68" font-family="Avenir Next, Segoe UI, sans-serif" font-size="26" letter-spacing="7">JOSEPH DUBON</text>
+  <text x="110" y="270" fill="#c0caf5" font-family="Georgia, Times New Roman, serif" font-size="72">
+    <tspan x="110" dy="0">Full-stack software engineer</tspan>
+    <tspan x="110" dy="82">building internal tools, web systems,</tspan>
+    <tspan x="110" dy="82">and practical automation.</tspan>
+  </text>
+  <text x="110" y="520" fill="#a9b1d6" font-family="Avenir Next, Segoe UI, sans-serif" font-size="30">
+    Portfolio, writing, and systems thinking
+  </text>
+  <rect x="110" y="554" width="230" height="8" rx="4" fill="url(#accent)" />
+</svg>

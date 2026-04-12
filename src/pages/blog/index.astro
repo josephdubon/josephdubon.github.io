@@ -13,9 +13,23 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 );
 
 const getPostPath = (id: string) => `/blog/${id.replace(/\.md$/, '')}/`;
+
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: `${site.title} Journal`,
+  url: `${site.siteUrl}/blog/`,
+  description: 'Essays on software, systems, automation, and technology education.',
+};
 ---
 
-<MainLayout title={`Blog | ${site.title}`} description="Writing on process, design, and web work.">
+<MainLayout
+  title={`Journal | ${site.title}`}
+  description="Essays on software, systems, automation, web presence, and technology education."
+  canonical="/blog/"
+  image={site.ogImage}
+  structuredData={blogSchema}
+>
   <main class="shell">
     <div class="header-wrap">
       <OrganicHeader client:load currentPath={Astro.url.pathname} />

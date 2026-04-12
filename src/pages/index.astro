@@ -13,9 +13,39 @@ const featuredPosts = (await getCollection('blog', ({ data }) => !data.draft && 
   .slice(0, 3);
 
 const getPostPath = (id: string) => `/blog/${id.replace(/\.md$/, '')}/`;
+
+const homeSchema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: site.title,
+    url: site.siteUrl,
+    email: site.email,
+    telephone: site.phone,
+    jobTitle: site.role,
+    homeLocation: {
+      '@type': 'Place',
+      name: site.location,
+    },
+    sameAs: [site.github],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: site.title,
+    url: site.siteUrl,
+    description: site.description,
+  },
+];
 ---
 
-<MainLayout title={`${site.title} | Blog and Portfolio`} description={site.description}>
+<MainLayout
+  title={`${site.title} | Full-Stack Software Engineer`}
+  description={site.description}
+  canonical="/"
+  image={site.ogImage}
+  structuredData={homeSchema}
+>
   <main class="shell">
     <div class="header-wrap">
       <OrganicHeader client:load currentPath={Astro.url.pathname} />
@@ -130,7 +160,7 @@ const getPostPath = (id: string) => `/blog/${id.replace(/\.md$/, '')}/`;
         <div class="section-heading with-link">
           <div>
             <p class="eyebrow">Writing</p>
-            <h2>Notes on software, process, and building useful systems.</h2>
+            <h2>Essays on software, systems, and the people who have to live with both.</h2>
           </div>
           <a class="inline-link" href="/blog/">Browse all writing</a>
         </div>
