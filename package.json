@@ -20,5 +20,13 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.8",
     "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "anymatch": {
+      "picomatch": "^2.3.2"
+    },
+    "yaml-language-server": {
+      "yaml": "^2.8.3"
+    }
   }
 }
