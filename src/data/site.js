@@ -4,9 +4,9 @@ export const site = {
   description:
     "Personal site for Joseph Dubon, a web developer and photographer helping small businesses and personal brands look more professional online.",
   location: "Reno, Nevada",
-  role: "Web development and photography for a stronger online presence.",
+  role: "Websites and photography that help small businesses look professional and get more clients.",
   intro:
-    "I build websites and create photography that help small businesses, creatives, and personal brands present themselves clearly online. The goal is simple: better visuals, better structure, and a more professional first impression.",
+    "I build websites and create photography that help small businesses and personal brands present themselves clearly online. Better visuals, better structure, and a stronger first impression.",
   email: "josephdubon@protonmail.com",
   phone: "775-232-6280",
   availability:
