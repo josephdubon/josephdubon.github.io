@@ -19,13 +19,13 @@ const blogSchema = {
   '@type': 'Blog',
   name: `${site.title} Journal`,
   url: `${site.siteUrl}/blog/`,
-  description: 'Essays on software, systems, automation, and technology education.',
+  description: 'Essays on AI workflows, software systems, troubleshooting, and technology education.',
 };
 ---
 
 <MainLayout
   title={`Journal | ${site.title}`}
-  description="Essays on AI workflows, software systems, automation, and technology education."
+  description="Essays on AI workflows, software systems, modern thinking, and technology education."
   canonical="/blog/"
   image={site.ogImage}
   structuredData={blogSchema}
@@ -37,9 +37,9 @@ const blogSchema = {
 
     <MotionSection client:load className="page-intro" delay={0.05}>
       <p class="eyebrow">Journal</p>
-      <h1>Essays on AI workflows, software systems, and the realities of making things work.</h1>
+      <h1>Essays on AI workflows, software systems, technology education, and the realities of making things work.</h1>
       <p class="section-copy">
-        Writing on engineering, AI-assisted execution, automation, web presence, and technology education from the perspective of someone who has to ship, support, and improve real systems.
+        Writing on engineering, AI-assisted execution, modern tools, troubleshooting, and technology education from the perspective of someone who has to ship, support, teach, and improve real systems.
       </p>
     </MotionSection>
 
