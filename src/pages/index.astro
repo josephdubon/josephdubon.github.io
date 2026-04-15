@@ -45,7 +45,7 @@ const homeSchema = [
 ---
 
 <MainLayout
-  title={`${site.title} | AI-Augmented Technical Manager`}
+  title={`${site.title} | Web Development and Photography`}
   description={site.description}
   canonical="/"
   image={site.ogImage}
@@ -58,20 +58,21 @@ const homeSchema = [
 
     <MotionSection client:load className="hero" delay={0.05}>
       <div class="hero-copy">
-        <p class="hero-note">AI-augmented operations, systems design, hardware problem solving, technology education, and technical leadership.</p>
+        <p class="hero-note">Web development and photography</p>
         <p class="eyebrow">{site.location}</p>
         <h1>{site.role}</h1>
         <p class="hero-intro">{site.intro}</p>
         <div class="hero-actions">
-          <a class="button button-primary" href={`mailto:${site.email}`}>Get in touch</a>
-          <a class="button" href="/blog/">Read the journal</a>
+          <a class="button button-primary" href="/projects/">View work</a>
+          <a class="button" href="/photography/">View photography</a>
+          <a class="button" href={`mailto:${site.email}`}>Contact me</a>
         </div>
         <div class="hero-strip" aria-label="Site focus">
-          <span>AI workflows</span>
-          <span>Automation</span>
-          <span>Internal systems</span>
-          <span>Hardware and physical systems</span>
-          <span>Tech education</span>
+          <span>Websites</span>
+          <span>Landing pages</span>
+          <span>Branding photography</span>
+          <span>Portraits</span>
+          <span>Creative work</span>
         </div>
       </div>
 
@@ -93,7 +94,7 @@ const homeSchema = [
           ))}
         </div>
         <div class="edition-notes">
-          <p class="edition-subhead">In progress</p>
+          <p class="edition-subhead">What I offer</p>
           <ul>
             {nowItems.map((item) => <li>{item}</li>)}
           </ul>
@@ -103,8 +104,8 @@ const homeSchema = [
 
     <section class="section-grid">
       <MotionSection client:load as="article" className="panel" delay={0.1}>
-        <p class="eyebrow">Core strengths</p>
-        <h2>Systems thinking across software, hardware, education, and operations with a bias toward real execution.</h2>
+        <p class="eyebrow">What I do</p>
+        <h2>Websites and visual work that help people look more established online.</h2>
         <div class="stack">
           {principles.map((principle) => (
             <div class="rule">
@@ -116,12 +117,11 @@ const homeSchema = [
       </MotionSection>
 
       <MotionSection client:load as="article" className="panel accent-panel" delay={0.16}>
-        <p class="eyebrow">Availability</p>
-        <h2>Open to roles where AI, systems, education, and management need to work together.</h2>
+        <p class="eyebrow">Best Fit</p>
+        <h2>Small businesses, creatives, and personal brands that need a clearer online presence.</h2>
         <p class="section-copy">
-          I am especially aligned with teams hiring for technical program management, AI-forward operations,
-          workflow automation, internal tooling, hardware-adjacent operations, technology education,
-          workshop leadership, and modern-thinking sessions that help people adapt to fast-changing tools and systems.
+          If the current site feels dated, the visuals feel disconnected, or the whole presentation does not reflect
+          the quality of the work, I help bring those pieces into alignment.
         </p>
         <div class="link-row">
           {site.socialLinks.map((link) => (
@@ -136,8 +136,8 @@ const homeSchema = [
     <div class="section-block">
       <MotionSection client:load className="panel" delay={0.2}>
         <div class="section-heading">
-          <p class="eyebrow">Portfolio</p>
-          <h2>Selected work across AI workflows, internal systems, client delivery, hardware-aware execution, education, and operational leadership.</h2>
+          <p class="eyebrow">Selected Work</p>
+          <h2>Examples from websites, technical delivery, and client-facing work.</h2>
         </div>
         <div class="project-grid">
           {featuredProjects.map((project: ProjectEntry) => (
@@ -164,8 +164,24 @@ const homeSchema = [
       <MotionSection client:load className="panel" delay={0.24}>
         <div class="section-heading with-link">
           <div>
+            <p class="eyebrow">Photography</p>
+            <h2>Portrait, branding, and creative photography that supports the same professional story as the website.</h2>
+          </div>
+          <a class="inline-link" href="/photography/">View photography</a>
+        </div>
+        <p class="section-copy">
+          I also offer photography for portraits, branding sessions, and creative work so the visuals can support
+          the same online presence the site is trying to build.
+        </p>
+      </MotionSection>
+    </div>
+
+    <div class="section-block">
+      <MotionSection client:load className="panel" delay={0.28}>
+        <div class="section-heading with-link">
+          <div>
             <p class="eyebrow">Writing</p>
-            <h2>Notes on AI workflows, software systems, technology education, and the people expected to use them well.</h2>
+            <h2>Writing on technology, troubleshooting, and the work behind making things feel clear.</h2>
           </div>
           <a class="inline-link" href="/blog/">Browse all writing</a>
         </div>

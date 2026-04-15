@@ -1,0 +1,60 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="170" y1="78" x2="1409" y2="821" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B2238"/>
+      <stop offset="1" stop-color="#0E1322"/>
+    </linearGradient>
+    <radialGradient id="glowLeft" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(360 270) rotate(90) scale(330 500)">
+      <stop stop-color="#7AA2F7" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#7AA2F7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowRight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1210 630) rotate(90) scale(320 470)">
+      <stop stop-color="#E0AF68" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#E0AF68" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" rx="36" fill="url(#bg)"/>
+  <circle cx="360" cy="270" r="180" fill="url(#glowLeft)"/>
+  <circle cx="1210" cy="630" r="180" fill="url(#glowRight)"/>
+
+  <rect x="76" y="72" width="1448" height="756" rx="32" fill="rgba(36,40,59,0.72)" stroke="rgba(192,202,245,0.18)"/>
+
+  <rect x="146" y="154" width="720" height="488" rx="30" fill="#171D30" stroke="rgba(192,202,245,0.18)"/>
+  <rect x="186" y="196" width="640" height="54" rx="18" fill="#20283F"/>
+  <rect x="210" y="214" width="180" height="16" rx="8" fill="#E0AF68" fill-opacity="0.9"/>
+  <rect x="414" y="214" width="84" height="16" rx="8" fill="#C0CAF5" fill-opacity="0.16"/>
+  <rect x="186" y="286" width="282" height="282" rx="28" fill="#20283F" stroke="rgba(122,162,247,0.35)"/>
+  <rect x="212" y="312" width="230" height="132" rx="22" fill="#101628"/>
+  <circle cx="327" cy="378" r="44" fill="#7AA2F7" fill-opacity="0.18"/>
+  <path d="M291 414C301 390 312 376 327 376C342 376 353 390 363 414" stroke="#7AA2F7" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="327" cy="360" r="24" fill="#7AA2F7" stroke="#7AA2F7" stroke-width="2"/>
+  <rect x="212" y="462" width="108" height="12" rx="6" fill="#C0CAF5" fill-opacity="0.18"/>
+  <rect x="212" y="486" width="164" height="12" rx="6" fill="#C0CAF5" fill-opacity="0.18"/>
+  <rect x="498" y="286" width="288" height="128" rx="24" fill="#20283F" stroke="rgba(224,175,104,0.32)"/>
+  <rect x="522" y="312" width="144" height="12" rx="6" fill="#E0AF68" fill-opacity="0.8"/>
+  <rect x="522" y="338" width="220" height="12" rx="6" fill="#C0CAF5" fill-opacity="0.18"/>
+  <rect x="522" y="364" width="198" height="12" rx="6" fill="#C0CAF5" fill-opacity="0.18"/>
+  <rect x="498" y="438" width="288" height="130" rx="24" fill="#20283F" stroke="rgba(122,162,247,0.32)"/>
+  <rect x="522" y="466" width="112" height="12" rx="6" fill="#7AA2F7" fill-opacity="0.82"/>
+  <rect x="522" y="492" width="212" height="12" rx="6" fill="#C0CAF5" fill-opacity="0.18"/>
+  <rect x="522" y="518" width="174" height="12" rx="6" fill="#C0CAF5" fill-opacity="0.18"/>
+
+  <g>
+    <rect x="970" y="220" width="478" height="350" rx="34" fill="#171D30" stroke="rgba(224,175,104,0.22)"/>
+    <rect x="1030" y="288" width="358" height="210" rx="32" fill="#20283F" stroke="rgba(224,175,104,0.4)" stroke-width="3"/>
+    <circle cx="1118" cy="394" r="42" fill="#E0AF68" fill-opacity="0.18" stroke="#E0AF68" stroke-width="3"/>
+    <circle cx="1266" cy="394" r="62" fill="#7AA2F7" fill-opacity="0.16" stroke="#7AA2F7" stroke-width="3"/>
+    <rect x="1150" y="510" width="118" height="30" rx="15" fill="#0F1424"/>
+    <circle cx="1209" cy="525" r="44" fill="#0F1424" stroke="#C0CAF5" stroke-width="6"/>
+    <circle cx="1209" cy="525" r="17" fill="#C0CAF5" fill-opacity="0.18" stroke="#C0CAF5" stroke-width="3"/>
+  </g>
+
+  <g opacity="0.96">
+    <rect x="360" y="676" width="882" height="118" rx="24" fill="#171D30" stroke="rgba(192,202,245,0.12)"/>
+    <text x="402" y="726" fill="#A9B1D6" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="28" font-weight="600">
+      <tspan x="402" dy="0">Better websites need better images.</tspan>
+      <tspan x="402" dy="36">Photography builds trust, clarity, and credibility.</tspan>
+    </text>
+  </g>
+</svg>

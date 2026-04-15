@@ -1,0 +1,109 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import OrganicHeader from '../../components/react/OrganicHeader.jsx';
+import MotionSection from '../../components/react/MotionSection.jsx';
+import { site } from '../../data/site';
+
+const photographyServices = [
+  {
+    title: 'Portraits',
+    description: 'Clean, natural portrait sessions for personal brands, professionals, and creative work.',
+  },
+  {
+    title: 'Branding Photography',
+    description: 'Images built to support websites, social profiles, and small business marketing.',
+  },
+  {
+    title: 'Lifestyle',
+    description: 'Real-world images with a more relaxed editorial feel for stories, products, and people.',
+  },
+  {
+    title: 'Creative Work',
+    description: 'More stylized portrait and concept-driven sessions when the work needs a stronger visual edge.',
+  },
+];
+
+const galleryPlaceholders = [
+  'Studio Portrait Session',
+  'Brand Identity Shoot',
+  'Lifestyle Editorial Set',
+  'Creative Portrait Concept',
+];
+
+const photoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `${site.title} Photography`,
+  url: `${site.siteUrl}/photography/`,
+  description: 'Portrait, branding, lifestyle, and creative photography services from Joseph Dubon.',
+};
+---
+
+<MainLayout
+  title={`Photography | ${site.title}`}
+  description="Portrait, branding, lifestyle, and creative photography services."
+  canonical="/photography/"
+  image={site.ogImage}
+  structuredData={photoSchema}
+>
+  <main class="shell">
+    <div class="header-wrap">
+      <OrganicHeader client:load currentPath={Astro.url.pathname} />
+    </div>
+
+    <MotionSection client:load className="page-intro" delay={0.05}>
+      <p class="eyebrow">Photography</p>
+      <h1>Photography work that helps people and brands look more considered online.</h1>
+      <p class="section-copy">
+        I offer portrait, branding, lifestyle, and creative photography with the same bias I bring to technical work:
+        clear presentation, strong fundamentals, and images that are actually useful in the places people will see them.
+      </p>
+    </MotionSection>
+
+    <MotionSection client:load className="panel" delay={0.1}>
+      <div class="section-heading">
+        <p class="eyebrow">Services</p>
+        <h2>Simple offerings for personal brands, creative work, and small business presence.</h2>
+      </div>
+      <div class="project-grid">
+        {photographyServices.map((service) => (
+          <article class="project-card">
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </article>
+        ))}
+      </div>
+    </MotionSection>
+
+    <MotionSection client:load className="panel" delay={0.14}>
+      <div class="section-heading">
+        <p class="eyebrow">Gallery</p>
+        <h2>Selected categories from the kind of photography work I offer.</h2>
+      </div>
+      <div class="photo-grid">
+        {galleryPlaceholders.map((label) => (
+          <div class="photo-placeholder">
+            <span>{label}</span>
+          </div>
+        ))}
+      </div>
+    </MotionSection>
+
+    <MotionSection client:load className="panel accent-panel" delay={0.18}>
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>Booking portraits, branding sessions, or creative work.</h2>
+      </div>
+      <p class="section-copy">
+        If you need photography for your personal brand, website, or business presence, send me an email and include
+        the kind of shoot you have in mind.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href={`mailto:${site.email}`}>Book a session</a>
+      </div>
+    </MotionSection>
+
+    <SiteFooter />
+  </main>
+</MainLayout>

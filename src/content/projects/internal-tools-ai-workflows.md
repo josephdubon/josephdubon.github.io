@@ -1,16 +1,15 @@
 ---
-slug: internal-tools-ai-workflows
-title: Internal Tools and AI Workflows
-description: Python-based internal tooling and AI-assisted workflows built to reduce coordination overhead and improve execution.
+title: Internal Tools and Workflow Support
+description: Internal systems and workflow support built to reduce friction, improve clarity, and make delivery more reliable behind the scenes.
 year: '2021-Present'
-type: Operational software
+type: Systems support
 status: Active area of focus
 featured: true
 tags:
-  - Python
-  - Automation
   - Internal Tools
-  - AI Workflows
+  - Workflow Systems
+  - Automation
+  - Support
 heroImage: /images/projects/internal-tools-ai-workflows-collaboration.jpg
 heroImageAlt: Two people reviewing a laptop together in a bright collaborative workspace.
 relatedPosts:
@@ -34,4 +33,6 @@ This kind of work fits how I like to build software. It is less about novelty an
 
 It also requires a strong translation layer between technical systems and human systems. Internal software only works if it reflects how people actually operate, not how an engineer wishes they operated.
 
-That is one reason I take AI tooling seriously as an engineering multiplier. Used well, it can accelerate prototyping, documentation, debugging, and workflow automation. Used poorly, it creates noise. The hard part is not access to the tool. It is judgment about where it belongs.
+Although this work sits behind the scenes, it connects directly to the public-facing side of what I do. Better internal systems lead to cleaner delivery, faster updates, and a more reliable experience for the people on the other end of the website, service, or brand.
+
+That is one reason I take AI tooling seriously as a practical multiplier. Used well, it can accelerate prototyping, documentation, debugging, and workflow automation. Used poorly, it creates noise. The hard part is not access to the tool. It is judgment about where it belongs.

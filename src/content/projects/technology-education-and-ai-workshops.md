@@ -1,15 +1,14 @@
 ---
-slug: technology-education-and-ai-workshops
-title: Technology Education and AI Workshops
-description: Teaching AI integration, modern technical thinking, and practical troubleshooting through workshops for both kids and adults.
+title: Technology Education Workshops
+description: Workshops for kids and adults focused on practical troubleshooting, modern technical thinking, and responsible AI use.
 year: '2022-Present'
-type: Education and workshops
+type: Education
 status: Ongoing
 featured: false
 tags:
   - Education
-  - AI Integration
   - Workshops
+  - AI Literacy
   - Modern Thinking
 heroImage: /images/blog/technology-education-for-kids-classroom.jpg
 heroImageAlt: Children gathered around a laptop in a collaborative learning environment.
@@ -45,6 +44,6 @@ For adults, the work is often about reducing intimidation, creating practical en
 
 In both cases, the core lesson is similar: technology should make people more capable, not more dependent and confused.
 
-That perspective sits close to the rest of my work.
+That perspective sits close to the rest of my work. Clear teaching, like clear websites and clear visual communication, helps people trust what they are looking at and understand what to do next.
 
-Whether I am building internal tooling, solving hardware problems, improving operations, or teaching a workshop, I am usually doing the same thing underneath: helping people operate more clearly in systems that can otherwise feel opaque, noisy, or overwhelming.
+Whether I am building websites, solving technical problems, improving operations, or teaching a workshop, I am usually doing the same thing underneath: helping people operate more clearly in systems that can otherwise feel opaque, noisy, or overwhelming.
