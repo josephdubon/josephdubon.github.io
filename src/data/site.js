@@ -2,27 +2,27 @@ export const site = {
   title: "Joseph Dubon",
   siteUrl: "https://josephdubon.github.io",
   description:
-    "Personal site for Joseph Dubon, an AI-augmented technical manager and technology educator focused on workflow automation, internal systems, hardware-adjacent problem solving, modern thinking, and operational execution.",
+    "Personal site for Joseph Dubon, a web developer and photographer helping small businesses and personal brands look more professional online.",
   location: "Reno, Nevada",
-  role: "AI-augmented technical manager and technology educator working across internal systems, automation, hardware, and operational clarity.",
+  role: "Web development and photography for a stronger online presence.",
   intro:
-    "I work at the intersection of people, systems, and execution. My background spans software delivery, internal tooling, hardware and physical system troubleshooting, technology education, and multi-site operations leadership. I increasingly use AI as a practical multiplier for workflow design, communication, and faster decision-making, while helping people think more clearly about modern tools and how to use them well.",
+    "I build websites and create photography that help small businesses, creatives, and personal brands present themselves clearly online. The goal is simple: better visuals, better structure, and a more professional first impression.",
   email: "josephdubon@protonmail.com",
   phone: "775-232-6280",
   availability:
-    "Open to AI-forward operations, technical program, workflow automation, technology education, and systems leadership roles.",
+    "Available for website projects, photography sessions, and combined visual + web work.",
   ogImage: "/images/joseph-dubon-og.svg",
   github: "https://github.com/josephdubon",
   currentEdition: {
     label: "Spring 2026",
-    title: "Shifting from builder to AI-augmented operator",
+    title: "Helping people look more professional online",
     summary:
-      "Focused on AI-enabled workflows, internal systems, hardware-aware operations, technology education, and team execution. The goal is not novelty. It is using the right tooling to remove drag, improve visibility, and help people operate at a higher level while building better judgment around modern technology.",
+      "I combine web development, visual presentation, and photography so the site and the imagery support the same story instead of working against each other.",
     stats: [
       { label: "Experience", value: "10+ years" },
-      { label: "Teams led", value: "32 staff" },
-      { label: "Scope", value: "11 sites" },
-      { label: "Focus", value: "AI workflows" },
+      { label: "Web focus", value: "Custom sites" },
+      { label: "Photo focus", value: "Branding + portraits" },
+      { label: "Clients", value: "Small business + personal brands" },
     ],
   },
   socialLinks: [
@@ -42,27 +42,23 @@ export const site = {
 };
 
 export const nowItems = [
-  "Repositioning my public work around AI-augmented operations, workflow design, technical education, and leadership.",
-  "Documenting how internal tools, automation, hardware, and AI support real execution instead of adding more noise.",
-  "Building case studies and writing that show management judgment, systems thinking, and practical adoption of new tooling.",
+  "Custom websites and landing pages for small businesses and independent brands.",
+  "Portrait, branding, and creative photography for a stronger visual presence.",
+  "Combined web and photography work so the site and the imagery feel intentional together.",
 ];
 
 export const principles = [
   {
-    title: "AI with operational judgment",
-    text: "I use AI where it improves speed, clarity, or leverage, not where it creates more process debt.",
+    title: "Web development",
+    text: "Custom websites, small business sites, landing pages, and updates that keep the experience clear and usable.",
   },
   {
-    title: "Systems translation",
-    text: "I connect software, hardware, and operational realities so adoption is realistic and durable.",
+    title: "Photography",
+    text: "Portrait, branding, and creative photography that gives people better visuals for websites, profiles, and marketing.",
   },
   {
-    title: "Execution under load",
-    text: "I am comfortable leading in environments where reliability, coordination, and clear ownership matter every day.",
-  },
-  {
-    title: "Technology education",
-    text: "I help people understand modern tools clearly so they can troubleshoot better, think better, and operate with more confidence.",
+    title: "Combined presence",
+    text: "When the site and the imagery are built together, the final result feels more credible, more consistent, and more professional.",
   },
 ];
 

@@ -8,22 +8,36 @@ import { site } from '../../data/site';
 
 type ProjectEntry = CollectionEntry<'projects'>;
 
-const projects = (await getCollection('projects')).sort(
-  (a: ProjectEntry, b: ProjectEntry) => b.data.year.localeCompare(a.data.year)
-);
+const projectOrder = [
+  'freelance-web-delivery',
+  'branding-and-portrait-photography',
+  'internal-tools-ai-workflows',
+  'technology-education-and-ai-workshops',
+  'technical-operations-leadership',
+];
+
+const projects = (await getCollection('projects')).sort((a: ProjectEntry, b: ProjectEntry) => {
+  const aIndex = projectOrder.indexOf(a.slug);
+  const bIndex = projectOrder.indexOf(b.slug);
+
+  if (aIndex === -1 && bIndex === -1) return 0;
+  if (aIndex === -1) return 1;
+  if (bIndex === -1) return -1;
+  return aIndex - bIndex;
+});
 
 const projectSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: `${site.title} Projects`,
   url: `${site.siteUrl}/projects/`,
-  description: 'Case studies covering AI workflows, internal systems, client delivery, and technical operations.',
+  description: 'Project case studies across websites, photography, systems support, education, and operations.',
 };
 ---
 
 <MainLayout
   title={`Projects | ${site.title}`}
-  description="Case studies covering AI workflows, internal systems, client delivery, and technical operations."
+  description="Project case studies across websites, photography, systems support, education, and operations."
   canonical="/projects/"
   image={site.ogImage}
   structuredData={projectSchema}
@@ -35,10 +49,14 @@ const projectSchema = {
 
     <MotionSection client:load className="page-intro" delay={0.05}>
       <p class="eyebrow">Projects</p>
-      <h1>Case studies in AI-enabled workflows, systems delivery, and operational execution.</h1>
+      <h1>Case studies from websites, photography, systems support, education, and operations.</h1>
       <p class="section-copy">
-        A focused set of pages on the work I want indexed and understood most clearly.
+        These projects show the main kinds of work behind the site: client websites, photography, supporting systems,
+        education work, and operational leadership. Together they form the same broader service story.
       </p>
+      <div class="hero-actions">
+        <a class="button" href="/photography/">Photography page</a>
+      </div>
     </MotionSection>
 
     <MotionSection client:load className="panel" delay={0.1}>
