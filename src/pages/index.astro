@@ -45,7 +45,7 @@ const homeSchema = [
 ---
 
 <MainLayout
-  title={`${site.title} | Full-Stack Software Engineer`}
+  title={`${site.title} | AI-Augmented Technical Manager`}
   description={site.description}
   canonical="/"
   image={site.ogImage}
@@ -58,7 +58,7 @@ const homeSchema = [
 
     <MotionSection client:load className="hero" delay={0.05}>
       <div class="hero-copy">
-        <p class="hero-note">Software engineering, systems thinking, and technical operations.</p>
+        <p class="hero-note">AI-augmented operations, systems design, and technical leadership.</p>
         <p class="eyebrow">{site.location}</p>
         <h1>{site.role}</h1>
         <p class="hero-intro">{site.intro}</p>
@@ -67,10 +67,10 @@ const homeSchema = [
           <a class="button" href="/blog/">Read the journal</a>
         </div>
         <div class="hero-strip" aria-label="Site focus">
-          <span>React</span>
-          <span>Python</span>
+          <span>AI workflows</span>
           <span>Automation</span>
-          <span>Technical operations</span>
+          <span>Internal systems</span>
+          <span>Operations leadership</span>
         </div>
       </div>
 
@@ -103,7 +103,7 @@ const homeSchema = [
     <section class="section-grid">
       <MotionSection client:load as="article" className="panel" delay={0.1}>
         <p class="eyebrow">Core strengths</p>
-        <h2>Engineering range with a bias toward systems that survive real use.</h2>
+        <h2>Systems thinking with a bias toward adoption, leverage, and real execution.</h2>
         <div class="stack">
           {principles.map((principle) => (
             <div class="rule">
@@ -116,10 +116,10 @@ const homeSchema = [
 
       <MotionSection client:load as="article" className="panel accent-panel" delay={0.16}>
         <p class="eyebrow">Availability</p>
-        <h2>Open to engineering work that benefits from technical depth and operational judgment.</h2>
+        <h2>Open to roles where AI, systems, and management need to work together.</h2>
         <p class="section-copy">
-          I am especially aligned with teams hiring for software engineering, internal tools,
-          automation, technical operations, or support engineering work.
+          I am especially aligned with teams hiring for technical program management, AI-forward operations,
+          workflow automation, internal tooling, and other roles where execution quality matters as much as tooling.
         </p>
         <div class="link-row">
           {site.socialLinks.map((link) => (
@@ -135,7 +135,7 @@ const homeSchema = [
       <MotionSection client:load className="panel" delay={0.2}>
         <div class="section-heading">
           <p class="eyebrow">Portfolio</p>
-          <h2>Selected experience from client delivery, internal tooling, and operations.</h2>
+          <h2>Selected work across AI workflows, internal systems, client delivery, and operational leadership.</h2>
         </div>
         <div class="project-grid">
           {featuredProjects.map((project: ProjectEntry) => (
@@ -163,7 +163,7 @@ const homeSchema = [
         <div class="section-heading with-link">
           <div>
             <p class="eyebrow">Writing</p>
-            <h2>Essays on software, systems, and the people who have to live with both.</h2>
+            <h2>Notes on AI workflows, software systems, and the people expected to use them well.</h2>
           </div>
           <a class="inline-link" href="/blog/">Browse all writing</a>
         </div>
