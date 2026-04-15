@@ -1,5 +1,4 @@
 ---
-slug: turn-it-off-and-on-again
 title: "Turn It Off and On Again Is Annoyingly Good Advice"
 description: "The oldest tech support joke survives for one reason: restarting actually fixes a surprising number of real problems."
 publishDate: 2026-04-15
@@ -8,6 +7,8 @@ tags:
   - Technology
   - Support
 featured: false
+heroImage: /images/blog/turn-it-off-and-on-again-restart-troubleshooting.svg
+heroImageAlt: Illustrated computer restart graphic showing a power symbol on one side and a happy recovered system on the other.
 relatedProjects:
   - internal-tools-ai-workflows
 ---

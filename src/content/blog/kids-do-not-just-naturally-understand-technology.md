@@ -1,5 +1,4 @@
 ---
-slug: kids-do-not-just-naturally-understand-technology
 title: Kids Do Not Just Naturally Understand Technology
 description: Why technology education still requires guidance, presence, and intentional teaching from adults.
 publishDate: 2026-04-08
@@ -12,6 +11,7 @@ heroImage: /images/blog/technology-education-for-kids-classroom.jpg
 heroImageAlt: Children gathered around a laptop in a collaborative learning environment.
 relatedProjects:
   - technical-operations-leadership
+  - technology-education-and-ai-workshops
 ---
 
 There is a common assumption that younger generations will naturally understand technology because they grow up around it.

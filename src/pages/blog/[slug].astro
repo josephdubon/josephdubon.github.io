@@ -95,11 +95,6 @@ const articleSchema = [
         <span>/</span>
         <span>{post.data.title}</span>
       </nav>
-      {post.data.heroImage ? (
-        <figure class="article-media">
-          <img src={post.data.heroImage} alt={post.data.heroImageAlt ?? post.data.title} />
-        </figure>
-      ) : null}
       <header class="article-header">
         <p class="eyebrow">Post</p>
         <h1>{post.data.title}</h1>
@@ -112,6 +107,11 @@ const articleSchema = [
           })}
         </p>
       </header>
+      {post.data.heroImage ? (
+        <figure class="article-media">
+          <img src={post.data.heroImage} alt={post.data.heroImageAlt ?? post.data.title} />
+        </figure>
+      ) : null}
 
       <div class="article-body">
         <Content />

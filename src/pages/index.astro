@@ -9,7 +9,7 @@ import { nowItems, principles, site } from '../data/site';
 type BlogEntry = CollectionEntry<'blog'>;
 type ProjectEntry = CollectionEntry<'projects'>;
 
-const featuredPosts = (await getCollection('blog', ({ data }) => !data.draft && data.featured))
+const featuredPosts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a: BlogEntry, b: BlogEntry) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
   .slice(0, 3);
 
@@ -120,7 +120,8 @@ const homeSchema = [
         <h2>Open to roles where AI, systems, education, and management need to work together.</h2>
         <p class="section-copy">
           I am especially aligned with teams hiring for technical program management, AI-forward operations,
-          workflow automation, internal tooling, hardware-adjacent operations, technology education, and other roles where execution quality matters as much as tooling.
+          workflow automation, internal tooling, hardware-adjacent operations, technology education,
+          workshop leadership, and modern-thinking sessions that help people adapt to fast-changing tools and systems.
         </p>
         <div class="link-row">
           {site.socialLinks.map((link) => (
